@@ -32,8 +32,8 @@
             div.innerHTML = 
             "<li class='post'><h3 class='titulo'>" 
             + entry.title 
-            + "</h3> <div class='entrada'>" 
-            + entry.title
+            + "</h3> <div class='entrada'data-theme='b'>" 
+            + entry.content
             +"</div></li>";
             
             container.appendChild(div);
@@ -48,11 +48,10 @@
  
     <script type="text/javascript">
     	$(".titulo").on( "click", function(){
-    		$(".entrad", this).slideToggle('slow');
+    		$(".entrada", this).slideToggle('slow');
     	});
 
     </script>
-
 
 	</head>
 	
@@ -69,9 +68,9 @@
 
 <div  data-role="navbar" data-iconpos="right">
 			<ul>
-				<li><a href="index.html" data-icon="edit"class="ui-btn-active">RSS</a></li>
-				<li><a href="mapa.html"  data-icon="star">MAPA</a></li>
-				<li><a href="contacto.html" data-icon="grid" >CONTACTO</a></li>
+				<li><a href="index.html" data-icon="edit" data-ajax="false" data-icon="grid">RSS</a></li>
+        <li><a href="mapa.html"  data-icon="star" class="ui-btn-active" data-ajax="false">MAPA</a></li>
+        <li><a href="contacto.html"  data-ajax="false">CONTACTO</a></li>
 			</ul>
 			</div>	
 			</header>
